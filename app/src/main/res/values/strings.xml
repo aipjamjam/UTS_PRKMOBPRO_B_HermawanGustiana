@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">List President</string>
+    <string name="name">Name</string>
+    <string name="toast">You Choose</string>
+    <string name="remarks">Remarks</string>
+    <string name="nim" tools:ignore="MissingTranslation">1157050141</string>
+    <string name="profile">Profile</string>
+    <string name="languange">Change Languange</string>
+    <string name="profile_name">Rifqi Ardian Nugraha</string>
+    <string name="detail_profile">Born in Subang on February 10, 1997,
+    in 2003-2009 attended Indragiri 1 Elementary School, 2009-2012 attending Tanjungsiang 2 Public Middle School,
+    2012-2015 attended Medikacom Vocational School in Bandung, and currently studies at UIN SGD Bandung
+    Department of Information Engineering Semester 7
+    </string>
+</resources>
