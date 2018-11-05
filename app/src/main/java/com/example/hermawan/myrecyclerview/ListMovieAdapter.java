@@ -1,4 +1,4 @@
-package com.example.rifqiardian.myrecyclerview;
+package com.example.rizkifr.myrecyclerview;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -13,23 +13,23 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 
 
-public class ListPresidentAdapter extends
-        RecyclerView.Adapter<ListPresidentAdapter.CategoryViewHolder> {
+public class ListMovieAdapter extends
+        RecyclerView.Adapter<ListMovieAdapter.CategoryViewHolder> {
 
     private Context context;
 
-    public ArrayList<President> getListPresident(){
-        return listPresident;
+    public ArrayList<Movie> getListMovie(){
+        return listMovie;
     }
 
 
-    public void setListPresident(ArrayList<President> listPresident){
-        this.listPresident = listPresident;
+    public void setListMovie(ArrayList<Movie> listMovie){
+        this.listMovie = listMovie;
     }
 
-    private ArrayList<President>listPresident;
+    private ArrayList<Movie> listMovie;
 
-    public ListPresidentAdapter(Context context){
+    public ListMovieAdapter(Context context){
         this.context = context;
     }
 
@@ -37,7 +37,7 @@ public class ListPresidentAdapter extends
     public CategoryViewHolder onCreateViewHolder(ViewGroup parent,
                                                  int viewType) {
         View itemRow = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_row_president, parent,
+                .inflate(R.layout.item_row_movie, parent,
                         false);
         return new CategoryViewHolder(itemRow);
     }
@@ -45,11 +45,11 @@ public class ListPresidentAdapter extends
     @Override
     public void onBindViewHolder(CategoryViewHolder holder, int position) {
 
-        holder.tvName.setText(getListPresident().get(position).getName());
-        holder.tvRemarks.setText(getListPresident().get(position).getRemarks());
+        holder.tvName.setText(getListMovie().get(position).getName());
+        holder.tvRemarks.setText(getListMovie().get(position).getRemarks());
 
         Glide.with(context)
-                .load(getListPresident().get(position).getPhoto())
+                .load(getListMovie().get(position).getPhoto())
                 .override(55, 55)
                 .crossFade()
                 .into(holder.imgPhoto);
@@ -57,7 +57,7 @@ public class ListPresidentAdapter extends
 
     @Override
     public int getItemCount() {
-        return getListPresident().size();
+        return getListMovie().size();
     }
 
 

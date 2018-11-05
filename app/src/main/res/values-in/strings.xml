@@ -1,15 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">Daftar President</string>
+    <string name="app_name">Daftar Film</string>
     <string name="name">Nama</string>
     <string name="toast">Kamu Memilih</string>
-    <string name="remarks">Periode</string>
-    <string name="nim">1157050141</string>
+    <string name="remarks">Tahun</string>
+    <string name="nim">1157050068</string>
     <string name="profile">Biodata</string>
     <string name="languange">Ubah Bahasa</string>
-    <string name="profile_name">Rifqi Ardian Nugraha</string>
-    <string name="detail_profile">Lahir di Subang pada tanggal 10 februari 1997,
-    pada tahun 2003-2009 bersekolah di SDN Indragiri 1, 2009-2012 bersekolah di SMPN 2 Tanjungsiang,
-    2012-2015 bersekolah di SMK Medikacom Bandung, dan pada saat ini kuliah di UIN SGD Bandung
+    <string name="profile_name">Hermawan Gustiana</string>
+    <string name="detail_profile">Lahir di Sukabumi pada tanggal 15 desember 1996, dan pada saat ini kuliah di UIN SGD Bandung
     jurusan Teknik Informatika Semester 7
     </string>
 </resources>

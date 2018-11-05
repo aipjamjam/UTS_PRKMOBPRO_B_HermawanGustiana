@@ -27,7 +27,7 @@
                 android:id="@+id/img_item_photo"
                 android:layout_width="130dp"
                 android:layout_height="150dp"
-                android:src="@drawable/profile"
+                android:src="@drawable/hermawan"
                 android:layout_margin="4dp"
                 android:scaleType="centerCrop" />
 

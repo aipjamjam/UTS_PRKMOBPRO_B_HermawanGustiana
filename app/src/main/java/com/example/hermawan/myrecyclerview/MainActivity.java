@@ -1,4 +1,4 @@
-package com.example.rifqiardian.myrecyclerview;
+package com.example.rizkifr.myrecyclerview;
 
 import android.content.Intent;
 import android.provider.Settings;
@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView rvCategory;
-    private ArrayList<President> list;
+    private ArrayList<Movie> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         rvCategory.setHasFixedSize(true);
 
         list = new ArrayList<>();
-        list.addAll(PresidentData.getListData());
+        list.addAll(MovieData.getListData());
         String title = getResources().getString(R.string.app_name);
         setActionBarTitle(title);
         showRecyclerList();
@@ -38,9 +38,9 @@ public class MainActivity extends AppCompatActivity {
     private void showRecyclerList() {
 
         rvCategory.setLayoutManager(new LinearLayoutManager(this));
-        ListPresidentAdapter listPresidentAdapter = new ListPresidentAdapter(this);
-        listPresidentAdapter.setListPresident(list);
-        rvCategory.setAdapter(listPresidentAdapter);
+        ListMovieAdapter listMovieAdapter = new ListMovieAdapter(this);
+        listMovieAdapter.setListMovie(list);
+        rvCategory.setAdapter(listMovieAdapter);
 
         ItemClickSupport.addTo(rvCategory).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
             @Override
@@ -82,15 +82,15 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void showSelectedPresident(President president){
+    private void showSelectedPresident(Movie movie){
         String toast = getResources().getString(R.string.toast);
-        Toast.makeText(this, toast + president.getName(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, toast + movie.getName(), Toast.LENGTH_SHORT).show();
         Bundle bundle = new Bundle();
-        bundle.putString("Name", president.getName());
-        bundle.putString("Remarks", president.getRemarks());
-        bundle.putString("Photo", president.getPhoto());
-        bundle.putString("Detail", president.getDetail());
-        Intent i = new Intent(MainActivity.this,PresidentDetail.class);
+        bundle.putString("Name", movie.getName());
+        bundle.putString("Remarks", movie.getRemarks());
+        bundle.putString("Photo", movie.getPhoto());
+        bundle.putString("Detail", movie.getDetail());
+        Intent i = new Intent(MainActivity.this,MovieDetail.class);
         i.putExtras(bundle);
         startActivity(i);
     }

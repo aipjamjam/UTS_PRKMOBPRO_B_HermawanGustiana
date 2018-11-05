@@ -1,7 +1,7 @@
-package com.example.rifqiardian.myrecyclerview;
+package com.example.rizkifr.myrecyclerview;
 
 
-class President {
+class Movie {
     private String name, remarks, photo, detail;
 
     public String getName() {
